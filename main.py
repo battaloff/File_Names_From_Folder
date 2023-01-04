@@ -9,7 +9,8 @@ print(path)
 container = []
 counter = 0
 while True:
-    for _, _, file_names in os.walk("test_folder"):
+    for _, _, file_names in os.walk("test_folder1" or
+                                    "test_folder"):
         for file_name in file_names:
             if file_name not in container:
                 container.append(file_name)
@@ -40,4 +41,4 @@ while True:
 
                     print(f"{counter} {plate_size} {qty} {company_name} {file_name} {equipment} {add_date_time}")
                     counter += 1
-                    sleep(0.2)
+                    sleep(0.01)
